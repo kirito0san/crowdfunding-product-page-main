@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.divs {
+  @apply bg-white rounded-lg p-6 flex gap-7   flex-col;
+}
+.done {
+  @apply bg-white rounded-lg p-6  gap-7   flex-col;
+}
+.back {
+  @apply bg-white rounded-lg p-6  gap-7   flex-col;
+}
+.times {
+  @apply block text-3xl text-black font-semibold mb-1;
+}
+.btn {
+  @apply bg-Moderate_cyan font-semibold  text-white py-2 px-3 rounded-full hover:bg-Dark_cyan;
+}
+.ColoredBorder:has(input:checked) {
+  @apply border-Moderate_cyan;
+}
+.myGrid {
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr;
+  grid-template-areas:
+    "span div div "
+    "par par par "
+    "con con con "
+    "left left left "
+    "pla pla pla";
+  gap: 10px;
+  align-items: center;
+  justify-items: start;
+}
+@media screen and (min-width: 768px) {
+  .myGrid {
+    grid-template-areas:
+      "span div left "
+      "par par par "
+      "con con con "
+      "pla pla pla";
+  }
+  .myGrid p.left {
+    justify-self: center;
+  }
+}
+.myGrid p.con {
+  grid-area: con;
+}
+.myGrid p.left {
+  grid-area: left;
+}
+.myGrid .first {
+  grid-area: div;
+}
+.myGrid > span {
+  justify-self: center;
+  grid-area: span;
+}
+.myGrid .end {
+  grid-area: pla;
+}
+.first {
+  @apply md:flex-row cursor-pointer;
+}
+.end {
+  @apply md:flex md:items-center md:justify-between;
+}
+.end > div {
+  @apply md:!px-5 md:gap-3;
+}

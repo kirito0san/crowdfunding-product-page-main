@@ -1,0 +1,12 @@
+{
+  "name": "crowdfunding-product-page-main",
+  "version": "1.0.0",
+  "description": "![Design preview for the Crowdfunding product page coding challenge](./design/desktop-preview.jpg)",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "cs": "npx tailwindcss -i ./src/style.css -o ./dist/output.css --watch",
+    "ty": "tsc --watch"
+  },
+  "author": "",
+  "license": "ISC"
+}
